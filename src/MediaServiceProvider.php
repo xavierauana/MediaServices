@@ -14,6 +14,9 @@ class MediaServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadMigrationsFrom(__DIR__.'/Migration');
+        $this->publishes([
+            __DIR__.'/media_service.php' => config_path('media_service.php'),
+        ]);
     }
 
     /**

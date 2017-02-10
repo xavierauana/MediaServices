@@ -8,6 +8,7 @@
 namespace Anacreation\Media\Service;
 
 
+use Anacreation\Media\Helpers\Validator\Validator;
 use Anacreation\Media\Model\Media;
 use Illuminate\Http\UploadedFile;
 
@@ -23,12 +24,26 @@ class MediaServices
      */
     private $path;
 
+    private $validator = null;
+
+
+    /**
+     * @return \Anacreation\Media\Helpers\Validator\Validator|null
+     */
+    public function getValidator() {
+        if (!$this->validator instanceof Validator) {
+            $this->validator = new Validator();
+        }
+
+        return $this->validator;
+    }
+
     /**
      * MediaServices constructor.
      * @param array $typeMap
      */
     public function __construct($relative_path = null) {
-        $this->path = $relative_path?? null;
+        $this->path = $relative_path?? config("media_service.default_storage_path");
     }
 
 
