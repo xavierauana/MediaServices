@@ -13,6 +13,7 @@ class MediaServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        //for testing
         $this->loadMigrationsFrom(__DIR__.'/Migration');
     }
 
