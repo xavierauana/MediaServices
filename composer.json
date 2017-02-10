@@ -15,7 +15,7 @@
   },
   "autoload": {
 	"psr-4": {
-	  "Anacreateion\\Media\\": "src"
+	  "Anacreation\\Media\\": "src"
 	}
   }
 }
