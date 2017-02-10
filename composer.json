@@ -1,0 +1,16 @@
+{
+  "name": "xavierauana/media",
+  "description": "Upload Files",
+  "type": "library",
+  "license": "All right reserved",
+  "authors": [
+	{
+	  "name": "Xavier Au",
+	  "email": "xavier.au@anacreation.com"
+	}
+  ],
+  "minimum-stability": "dev",
+  "require": {
+	"php": "^7.0"
+  }
+}
